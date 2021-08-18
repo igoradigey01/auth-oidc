@@ -4,23 +4,30 @@ import { BrowserModule,Title } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CompanyComponent } from './company/company.component';
+
 import { MenyComponent } from './meny/meny.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CompanyComponent,
+
     MenyComponent,
     NotFoundComponent,
-   
+
+
+  ],
+  exports:[
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule 
   ],
   providers: [
     Title

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from './../shared/sevices/auth.service'
 
 @Component({
   selector: 'app-meny',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenyComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _authService: AuthService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  public login = () => {
+    this._authService.login();
+  }
 }

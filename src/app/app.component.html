@@ -1,7 +1,19 @@
 
-<h1>App Component Work!</h1>
+<div class="container">
+  <div class="row">
+      <div class="col">
+       <app-meny></app-meny>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
 
 <!------------------------------------------->
 <button (click)="LoadAuthLazy()" >Войти</button>
 <a  routerLink="/lazy-Auth/auth">44444</a>
-<router-outlet></router-outlet>
+<a  routerLink="/lazy-Auth/company">55555</a>
+

@@ -3,18 +3,25 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
+import { CompanyComponent } from './../company/company.component';
+import { LazyServiceModule} from './../shared/sevices/lazy-service.module';
+import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
 
 
 @NgModule({
   declarations: [
-    AuthComponent
+    AuthComponent,
+    CompanyComponent,
+    AuthCallbackComponent
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    LazyServiceModule
   ],
   exports:[
-    AuthComponent
+    AuthComponent,
+    CompanyComponent
   ]
 })
 export class AuthModule { }
